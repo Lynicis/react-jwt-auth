@@ -13,7 +13,9 @@ require("dotenv").config();
 const controlToken = require('./lib/token');
 
 const app = express();
-const port = 1881;
+const PORT = 1881;
+
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 // for remote access api
 app.use(cors());
@@ -65,6 +67,10 @@ app.get("/api/data", controlToken, (req,res)=>{
   res.sendFile(path.join(__dirname + '/lib/fakeData.json'));
 });
 
-app.listen(port, () => {
-  console.log(`Server listening PORT: ${port}`);
+app.get("*", (req,res)=>{
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+})
+
+app.listen(PORT, () => {
+  console.log(`Server listening PORT: ${PORT}`);
 });
