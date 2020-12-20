@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.env
+.gitignore
+client/node_modules
+client/npm-debug.log
+client/yarn-error.log
+client/yarn-debug.log
