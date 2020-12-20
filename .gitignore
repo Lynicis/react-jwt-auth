@@ -5,3 +5,9 @@ npm-error.log
 npm-debug.log
 yarn-error.log
 yarn-debug.log
+client/node_modules
+client/yarn.lock
+client/npm-error.log
+client/npm-debug.log
+client/yarn-error.log
+client/yarn-debug.log
